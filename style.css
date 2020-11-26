@@ -1,0 +1,79 @@
+html
+{
+  background:black;
+  height:100%;
+}
+
+body
+{
+  width:1000px;
+  background:rgba(255,255,255,0.4);
+  margin:auto;
+}
+
+h1
+{
+  text-align:center;
+}
+
+a
+{
+  text-decoration:none;
+  color:rgba(0,64,128,0.8);
+}
+
+.label, .data
+{
+  display: inline-block;
+  vertical-align:top;
+  margin-top:6px;
+}
+.label
+{
+  text-align:right;
+  width:200px;
+  padding-right:5px;
+}
+.data
+{
+  width:420px;
+}
+
+.section
+{
+  display:none;
+}
+
+.section.displayed
+{
+  display:initial !important;
+}
+
+a.header_link
+{
+  color:blue;
+}
+a.header_link:hover
+{
+  color:green;
+}
+
+.header_link
+{
+  font-size:25px;
+  fill: rgba(128,128,128,0.5);
+}
+.header_link:hover
+{
+  fill: rgba(64,64,255,1);
+}
+.header_link.selected
+{
+  fill: rgba(0,255,0,0.5);
+  cursor:default;
+}
+
+.section
+{
+  padding:5px;
+}

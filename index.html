@@ -1,8 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="./style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <p>Absolute barebones index file for git pages</p>
+    <div id="header">
+      <!--
+      <ul>
+        <li><a href="javascript:showPage('personal_information', false);">Personal Information</a></li>
+        <li><a href="javascript:showPage('interest_in_it', false);">Interest in IT</a></li>
+        <li><a href="javascript:showPage('ideal_job', false);">Ideal Job</a></li>
+        <li><a href="javascript:showPage('personal_profile', false);">Personal Profile</a></li>
+        <li><a href="javascript:showPage('project_idea', false);">Project Idea</a></li>
+        <!-/- <li><a href="javascript:showPage('');"></a></li> -/->
+      </ul>
+      -->
+      <svg viewbox="0 0 1000 1000" preserveAspectRatio="none" style="width:calc((100% - 990px) / 2); height:100%; position:fixed; right:0; top:0;">
+        <filter id="blur4">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5 0" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <path d="M10,0 L10,1000 1000,1000 1000,10" fill="black" filter="url(#blur4)" />
+      </svg>
+      <svg viewbox="0 0 1000 1000" preserveAspectRatio="none" style="width:calc((100% - 990px) / 2); height:100%; position:fixed; left:0; top:0;">
+        <filter id="blur3">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5 0" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <path d="M0,0 L0,1000 990,1000 990,0" fill="black" filter="url(#blur3)" />
+      </svg>
+      <div style="width:1000px; height:15px;"></div>
+      <svg width='1000px' height='112px' style="margin:auto; display:block; position:fixed; top:0;">
+        <filter id="blur">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0 3" />
+          <feOffset dx="0" dy="2" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="blur2">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <path id="background" d="M0,105 C500,10 500,10 1000,105 L1000,0 0,0" fill="black" filter="url(#blur)" />
+        <path id="curve" d="M0,100 C500,00 500,00 1000,100" fill="transparent" />
+        <text>
+          <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle" filter="url(#blur2)">
+            <a class="header_link" id="personal_information_header" href="javascript:showPage('personal_information')">
+              [Personal Information]
+            </a>
+            <a class="header_link" id="interest_in_it_header" href="javascript:showPage('interest_in_it')">
+              [Interest in IT]
+            </a>
+            <a class="header_link" id="ideal_job_header" href="javascript:showPage('ideal_job')">
+              [Ideal Job]
+            </a>
+            <a class="header_link" id="personal_profile_header" href="javascript:showPage('personal_profile')">
+              [Personal Profile]
+            </a>
+            <a class="header_link" id="project_idea_header" href="javascript:showPage('project_idea')">
+              [Project Idea]
+            </a>
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <div class="section displayed" id="personal_information">
+      <h1 style="margin-bottom:0;">Personal Information</h1>
+      <hr style="border-color:black; margin-top:0;" />
+      <img src="./portrait.png" style="float:right; width:300px; height:400px; margin:10px; margin-right:40px;" />
+      <span class="label">Name: </span><span class="data" id="name"></span><br />
+      <span class="label">Primary Alias: </span><span class="data">Chameleon</span><br />
+      <span class="label">Student Number: </span><span class="data">3884930</span><br />
+      <span class="label">Student Email: </span><span class="data"><a href="mailto:s3884930@student.rmit.edu.au">s3884930@student.rmit.edu.au</a></span><br />
+      <span class="label">Nationality: </span><span class="data">Australian</span><br />
+      <span class="label">Culture: </span><span class="data"><a href="https://en.wikipedia.org/wiki/Digital_citizen">Digital Citizen</a></span><br />
+      <span class="label">Interesting Fact: </span><span class="data">Has successfully removed nearly all traces of his name from the internet. Only an old ABN record remains.<br />Even this page shouldn't show up in a search result for his name.</span><br />
+      <span class="label">Interesting Skill: </span><span class="data">Rapid prototyping of extensions/tweaks to web sites/applications via the use of userscripts.</span><br />
+      <span class="label">Daily Toolkit: </span><span class="data">
+        <a href="">zsh</a>, 
+        <a href="">tmux</a>, 
+        <a href="">termite</a>,
+        <a href="">vim</a>,
+        <a href="">Arch Linux</a>,
+        <a href="">Wayland</a>/<a href="">wlroots</a>/custom compositor,
+        <a href="">Chromium</a>,
+        <a href="">MariaDB</a>/<a href="">MySQL</a>,
+        <a href="">node.js</a>,
+        <a href="">MongoDB</a>,
+        multiple bespoke domain specific javascript web applications 
+      </span><br />
+      <span class="label">Interests: </span><span class="data">Movies, Reading, Writing, Learning, Creating/Inventing</span><br />
+      <span class="label">Dis-interests: </span><span class="data"></span><br />
+    </div>
+    <div class="section" id="interest_in_it"></div>
+    <div class="section" id="ideal_job"></div>
+    <div class="section" id="personal_profile"></div>
+    <div class="section" id="project_idea"></div>
+    <div style="clear:both;"></div>
+    <!--<div style="width:100%; height:2000px;"></div>-->
+    <script src="./main.js"></script>
   </body>
 </html>
