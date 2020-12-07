@@ -8,6 +8,8 @@ const titles={
 var initialPage=document.location.href.split('?page=');
 if(initialPage.length>1)
   showPage(initialPage[1], "replace");
+else
+  showPage("personal_information", "replace");
 
 makeBackground();
 
